@@ -1,0 +1,301 @@
+.s-hero {
+    position: relative;
+
+    .swiper-principal {
+        width: 100%;
+        height: 98vh;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                padding-top: 20.7rem;
+                width: 100%;
+
+                &.slide-01 {
+                    background: url("../img/diablo-capa.jpg") no-repeat center center;
+                    background-size: cover;
+                }
+
+                &.slide-02 {
+                    background: url("../img/hearthstone-capa.jpg") no-repeat center center;
+                    background-size: cover;
+                }
+
+                &.slide-03 {
+                    background: url("../img/warcraft-capa.jpg") no-repeat center center;
+                    background-size: cover;
+                }
+
+                .container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .left-content {
+                        margin-left: 22.3rem;
+                        width: 100%;
+                        max-width: 56.2rem;
+
+                        h2 {
+                            color: #FFF;
+                            font-size: 6.4rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 110.2%;
+                            margin-bottom: 1.6rem;
+                        }
+
+                        p {
+                            color: #FFF;
+                            font-size: 1.8rem;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: -0.09px;
+                            margin-bottom: 3.2rem;
+                        }
+
+                        .btn {
+                            padding: 0px 3.8rem;
+                            line-height: 5.2rem;
+                        }
+                    }
+
+                    .right-content {
+                        width: 100%;
+                        max-width: 28rem;
+
+                        .logo {
+                            width: 28rem;
+                            height: 18rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 8.6rem;
+                        }
+
+                        .video {
+                            width: 100%;
+                            max-width: 28rem;
+
+                            span {
+                                display: block;
+                                color: #FFF;
+                                text-align: right;
+                                font-size: 13px;
+                                font-weight: 600;
+                                line-height: 1.9rem;
+                                text-transform: uppercase;
+                                margin-bottom: 1.6rem;
+                            }
+
+                            .btn-video {
+                                position: relative;
+                                width: 100%;
+                                height: 15.8rem;
+                                border-radius: 4px;
+                                overflow: hidden;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .thumb {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    transition: opacity .3s;
+
+                                    &:hover {
+                                        &.default {
+                                            opacity: 0;
+                                        }
+
+                                        &.hover {
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    &.default {
+                                        opacity: 1;
+                                    }
+
+                                    &.hover {
+                                        opacity: 0;
+                                    }
+                                }
+
+                                .icon {
+                                    position: relative;
+                                    z-index: 1;
+                                    transition: opacity .3s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .slide-thumbnail {
+        position: absolute;
+        top: 24.1rem;
+        left: 8%;
+        z-index: 2;
+        height: 36rem;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 4.8rem;
+                height: 4.8rem;
+                cursor: pointer;
+                opacity: 0.4;
+                filter: grayscale(100%);
+                transition: opacity .3s, filter .3s;
+
+                &.disable {
+                    pointer-events: none;
+                }
+
+                &-thumb-active {
+                    opacity: 1;
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+}
+
+.s-games {
+    padding-top: 8.3rem;
+    padding-bottom: 11rem;
+
+    .top {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 7.8rem;
+
+        .left-top {
+            width: 100%;
+            max-width: 39.9rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            span {
+                display: block;
+                margin-top: 1.1rem;
+                color: #8F9199;
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            h2 {
+                width: 100%;
+                max-width: 17.5rem;
+                font-size: 3.2rem;
+                font-weight: 700;
+                line-height: 110.2%;
+            }
+
+        }
+
+        .right-top {
+            width: 100%;
+            max-width: 58.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                display: flex;
+                max-width: 15.9rem;
+
+                li {
+                    &:not(:last-child) {
+                        margin-right: 2.5rem;
+                    }
+                    
+                    a {
+                        img {
+                            opacity: 0.5;
+                            transition: opacity .3s;
+                        }
+                        &.active {
+                            img {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn-all-games {
+                display: flex;
+                align-items: center;
+                color: $primary-default;
+                font-size: 1.6rem;
+                font-weight: 600;
+                line-height: normal;
+
+                img {
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+
+    .tab-games-content {
+        .tab-pane-games {
+            display: none;
+
+            &.active {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 4.7rem 3.2rem;
+                animation: fadeUp .4s forwards;
+            }
+
+            .card-all-games {
+                width: 100%;
+                max-width: 28rem;
+                border: 1.5px solid #212428;
+                border-radius: 4px;
+                height: 38.4rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 3.4rem;
+                    color: #FFF;
+                    font-size: 1.72rem;
+                    font-weight: 600;
+                    line-height: 2.4rem;
+
+                    img {
+                        margin-right: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes fadeUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+}
