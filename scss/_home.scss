@@ -219,12 +219,13 @@
                     &:not(:last-child) {
                         margin-right: 2.5rem;
                     }
-                    
+
                     a {
                         img {
                             opacity: 0.5;
                             transition: opacity .3s;
                         }
+
                         &.active {
                             img {
                                 opacity: 1;
@@ -293,9 +294,124 @@
             opacity: 0;
             transform: translateY(20px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0px);
+        }
+    }
+}
+
+.s-download {
+    width: 100%;
+    height: 85rem;
+    background: url("../img/bg-section-download.png") no-repeat center center;
+    overflow: hidden;
+    background-size: cover;
+
+    .container {
+        position: relative;
+    }
+
+    .text-left {
+        width: 100%;
+        max-width: 29.9rem;
+        padding-top: 13.2rem;
+
+        .logo {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: #FFF;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 110.2%;
+            margin-bottom: 3rem;
+        }
+
+        ul {
+            margin-bottom: 4.2rem;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                &:not(:last-child) {
+                    margin-bottom: 2.4rem;
+                }
+
+                .icon {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 1.6rem;
+                }
+
+                p {
+                    color: #828792;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    line-height: 178.2%;
+                }
+
+            }
+        }
+
+        .btn {
+            padding: 0px 31px;
+            line-height: 5.2rem;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 4.9rem;
+        }
+
+        .app {
+            display: flex;
+            align-items: center;
+
+            p {
+                color: #E5E5E5;
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: normal;
+                max-width: 19rem;
+                margin-left: 1.8rem;
+
+                a {
+                    text-decoration: underline;
+
+                    &:hover {
+                        color: $primary-light;
+                    }
+                }
+            }
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: 9.9rem;
+        right: -178px;
+        width: 100%;
+        max-width: 106.6rem;
+        height: 61rem;
+
+        .image-lg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .image-sm {
+            position: absolute;
+            bottom: -28px;
+            right: 53px;
+            animation: float 6s ease-in-out infinite;
         }
     }
 }
