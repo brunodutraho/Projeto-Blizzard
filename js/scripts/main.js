@@ -38,3 +38,31 @@ allFilters.forEach((filter, index) => {
         filter.classList.add('active');
     })
 });
+
+
+//Modal de login
+const openModal = document.querySelector('.js-open-modal');
+const btnFecharModal = document.querySelector('.js-close');
+const closeOverlay = document.querySelector('.js-overlay')
+
+openModal.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    let tagHtml = document.documentElement;
+    tagHtml.classList.add('show-modal');
+
+})
+
+btnFecharModal.addEventListener('click', () => {
+
+    let tagHtml = document.documentElement;
+    tagHtml.classList.remove('show-modal');
+
+})
+
+closeOverlay.addEventListener('click', () => {
+
+    let tagHtml = document.documentElement;
+    tagHtml.classList.remove('show-modal')
+
+})
