@@ -54,6 +54,18 @@ header {
 
                         img {
                             margin-left: 1.4rem;
+                            transition: transform .3s;
+                        }
+
+                        &:hover {
+                            color: $primary-default;
+                        }
+
+                        &.active {
+                            color: $primary-default;
+                            img {
+                                transform: rotate(180deg);
+                            }
                         }
                     }
                 }

@@ -66,3 +66,31 @@ closeOverlay.addEventListener('click', () => {
     tagHtml.classList.remove('show-modal')
 
 })
+
+
+//Dropdown aba menu Jogos e Esportes
+const btnMenu = document.querySelectorAll('.js-btn-menu');
+const abaMenu = document.querySelectorAll('.js-menu')
+
+btnMenu.forEach((btn, index) => {
+    btn.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        abaMenu.forEach(itemMenu => {
+            itemMenu.classList.remove('active');
+            itemMenu.addEventListener('mouseleave', () => {
+                itemMenu.classList.remove('active');
+                btnMenu.forEach(itemBtn => {
+                    itemBtn.classList.remove('active');
+                })
+            })
+        })
+
+        btnMenu.forEach(itemBtn => {
+            itemBtn.classList.remove('active');
+        })
+
+        btn.classList.add('active')
+        abaMenu[index].classList.add('active')
+    })
+})
