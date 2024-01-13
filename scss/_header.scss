@@ -8,77 +8,125 @@ header {
     display: flex;
     align-items: center;
     z-index: 99;
+    background-color: #020203;
 
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
 
-        .left-container {
-            display: flex;
-            align-items: center;
+    .left-container {
+        display: flex;
+        align-items: center;
 
-            .logo {
-                position: relative;
+        .logo {
+            position: relative;
 
-                &::after {
-                    content: "";
-                    width: 4.3rem;
-                    border-top: 2px solid $primary-default;
-                    position: absolute;
-                    left: 0;
-                    bottom: -2.9rem;
-                }
+            &::after {
+                content: "";
+                width: 4.3rem;
+                border-top: 2px solid $primary-default;
+                position: absolute;
+                left: 0;
+                bottom: -2.9rem;
             }
+        }
 
-            nav {
-                margin-left: 11.2rem;
+        nav {
+            margin-left: 11.2rem;
 
-                ul {
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    &:not(:first-child) {
+                        margin-left: 3.4rem;
+                    }
+                }
+
+                a {
                     display: flex;
                     align-items: center;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                    color: #FFFFFF;
 
-                    li {
-                        &:not(:first-child) {
-                            margin-left: 3.4rem;
-                        }
+                    img {
+                        margin-left: 1.4rem;
+                        transition: transform .3s;
                     }
 
-                    a {
-                        display: flex;
-                        align-items: center;
-                        font-weight: 500;
-                        font-size: 1.4rem;
-                        line-height: 2.1rem;
-                        color: #FFFFFF;
+                    &:hover {
+                        color: $primary-default;
+                    }
+
+                    &.active {
+                        color: $primary-default;
 
                         img {
-                            margin-left: 1.4rem;
-                            transition: transform .3s;
-                        }
-
-                        &:hover {
-                            color: $primary-default;
-                        }
-
-                        &.active {
-                            color: $primary-default;
-                            img {
-                                transform: rotate(180deg);
-                            }
+                            transform: rotate(180deg);
                         }
                     }
                 }
             }
         }
+    }
 
-        .right-container {
-            display: flex;
-            align-items: center;
+    .right-container {
+        display: flex;
+        align-items: center;
 
-            .btn {
-                &:not(:first-child) {
-                    margin-left: 1.6rem;
+        .btn {
+            &:not(:first-child) {
+                margin-left: 1.6rem;
+            }
+        }
+
+        .menu-mobile {
+            display: none;
+        }
+    }
+
+
+    @media(max-width: 991px) {
+        
+            .left-container {
+                nav {
+                    display: none;
+                }
+            }
+
+            .right-container {
+                .menu-mobile {
+                    margin-left: 8.9rem;
+                    display: block;
+                }
+            }
+        
+    }
+    @media(max-width: 578px) {
+
+            .right-container {
+                .btn {
+                    display: none;
+                }
+            }
+        
+    }
+
+    @media(max-width: 420px) {
+
+        height: 8rem;
+        .left-container {
+            .logo {
+                width: 100%;
+                max-width: 6.9rem;
+                height: 3.2rem;
+                &::after {
+                    bottom: -2.59rem;
                 }
             }
         }
