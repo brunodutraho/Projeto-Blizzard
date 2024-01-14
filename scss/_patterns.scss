@@ -53,6 +53,7 @@
         width: 100%;
         height: 38.4rem;
         margin-bottom: 2.4rem;
+
         img {
             transition: transform .3s ease-in;
         }
@@ -72,6 +73,55 @@
             font-size: 1.4rem;
             line-height: 2.1rem;
             color: rgba(229, 229, 229, 0.8);
+        }
+    }
+
+    @media(max-width: 991px) {
+        width: 100%;
+        max-width: 20.1rem;
+
+        .image {
+            height: 28.3rem;
+            margin-bottom: 1.7rem;
+        }
+
+        .info {
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+
+    @media(max-width: 830px) {
+        width: 100%;
+        max-width: 18rem;
+
+        .image {
+            height: 24.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+    }
+
+    @media(max-width: 560px) {
+        width: 100%;
+        max-width: 18rem;
+
+        .image {
+            max-width: 15.5rem;
+            height: 21.7rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info {
+            h3 {
+                display: none;
+            }
+
+            span {
+                display: none;
+            }
         }
     }
 

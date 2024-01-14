@@ -224,12 +224,14 @@
                     &.slide-02 {
                         background-position-x: 83%;
                     }
+
                     &.slide-03 {
                         background-position-x: 84%;
                     }
                 }
             }
         }
+
         .slide-thumbnail {
             bottom: 29rem;
 
@@ -251,15 +253,18 @@
             .swiper-wrapper {
                 .swiper-slide {
                     padding-top: 13.1rem;
+
                     &.slide-01 {
                         background-position-x: 48%;
                     }
+
                     &.slide-02 {
                         background-position-x: 65%;
                     }
 
                     &.slide-03 {
                         background-position-x: 60%;
+
                         .container {
                             .left-content {
                                 h2 {
@@ -273,9 +278,11 @@
                     .container {
                         .left-content {
                             max-width: 33rem;
+
                             h2 {
                                 font-size: 3.8rem;
                             }
+
                             .btn {
                                 padding: 0px 3.2rem;
                                 line-height: 5.2rem;
@@ -298,7 +305,6 @@
 }
 
 .s-games {
-    display: none;
     padding-top: 8.3rem;
     padding-bottom: 11rem;
 
@@ -418,6 +424,126 @@
             }
         }
     }
+
+    @media(max-width: 991px) {
+        padding-bottom: 8.7rem;
+        .top {
+            .left-top {
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        .tab-games-content {
+            .tab-pane-games {
+                .card-all-games {
+                    max-width: 20.1rem;
+                    height: 28.3rem;
+
+                    img {
+                        max-width: 8.6rem;
+                    }
+
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 830px) {
+        padding-top: 8.8rem;
+
+        .top {
+            margin-bottom: 5.8rem;
+        }
+
+        .tab-games-content {
+            .tab-pane-games {
+                &.active {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 4.1rem 6rem;
+                }
+
+                .card-all-games {
+                    max-width: 18rem;
+                    height: 24.5rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 770px) {
+        .top {
+            .left-top {
+                max-width: 24rem;
+            }
+
+            .right-top {
+                max-width: 47rem;
+            }
+        }
+
+        .tab-games-content {
+            .tab-pane-games {
+                &.active {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 3rem 3rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 560px) {
+        padding-top: 5.1rem;
+        padding-bottom: 6.9rem;
+
+        .top {
+            margin-bottom: 5.7rem;
+
+            .right-top {
+                max-width: 14.5rem;
+
+                ul {
+                    display: none;
+                }
+            }
+        }
+
+        .tab-games-content {
+            .tab-pane-games {
+                &.active {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 2.4rem 1.6rem;
+                }
+
+                .card-all-games {
+                    max-width: 15.5rem;
+                    height: 21.7rem;
+
+                    img {
+                        max-width: 6.9rem;
+                        height: 3.1rem;
+                    }
+
+                    span {
+                        font-size: 1.4rem;
+
+                        img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 .s-download {
