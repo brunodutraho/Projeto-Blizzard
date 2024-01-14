@@ -15,6 +15,8 @@ const slideThumb = new Swiper('.slide-thumbnail', {
     } 
 });
 
+const progressSlide = document.querySelector('.js-progress')
+
 const swiperSlide = new Swiper('.swiper-principal', {
     effect: 'fade',
     thumbs: {
@@ -23,7 +25,25 @@ const swiperSlide = new Swiper('.swiper-principal', {
     autoplay: {
         delay: 5000,
         disableOnInteraction: false
-    }
+    },
+
+    //Barra de progress 
+    on: {
+        init: function() {
+            progressSlide.classList.remove('animate');
+            progressSlide.classList.remove('active');
+            progressSlide.classList.add('animate');
+            progressSlide.classList.add('active');
+        },
+        slideChangeTransitionStart: function () {
+            progressSlide.classList.remove('animate');
+            progressSlide.classList.remove('active');
+            progressSlide.classList.add('active');
+        },
+        slideChangeTransitionEnd: function () {
+            progressSlide.classList.add('animate');
+        },
+    },
 });
 
 //Filtro tab s-games
