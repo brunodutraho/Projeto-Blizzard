@@ -21,7 +21,7 @@ const swiperSlide = new Swiper('.swiper-principal', {
         swiper: slideThumb,
     },
     autoplay: {
-        delay: 7000,
+        delay: 5000,
         disableOnInteraction: false
     }
 });

@@ -218,15 +218,27 @@
     }
 
     @media(max-width: 830px) {
+        .swiper-principal {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &.slide-02 {
+                        background-position-x: 83%;
+                    }
+                    &.slide-03 {
+                        background-position-x: 84%;
+                    }
+                }
+            }
+        }
         .slide-thumbnail {
-            bottom: 52rem;
+            bottom: 29rem;
 
         }
     }
 
     @media(max-width: 770px) {
         .slide-thumbnail {
-            bottom: 38rem;
+            bottom: 30rem;
 
         }
     }
@@ -238,20 +250,20 @@
 
             .swiper-wrapper {
                 .swiper-slide {
-                    padding-top: 14.5rem;
-
+                    padding-top: 13.1rem;
+                    &.slide-01 {
+                        background-position-x: 48%;
+                    }
                     &.slide-02 {
-                        background: url("../img/hearthstone-capa.jpg") no-repeat right center;
-                        background-size: cover;
+                        background-position-x: 65%;
                     }
 
                     &.slide-03 {
-                        background: url("../img/warcraft-capa.jpg") no-repeat right top;
-                        background-size: cover;
+                        background-position-x: 60%;
                         .container {
                             .left-content {
                                 h2 {
-                                    font-size: 3.7rem;
+                                    font-size: 3.4rem;
                                 }
                             }
                         }
@@ -260,8 +272,9 @@
 
                     .container {
                         .left-content {
+                            max-width: 33rem;
                             h2 {
-                                font-size: 4rem;
+                                font-size: 3.8rem;
                             }
                             .btn {
                                 padding: 0px 3.2rem;
