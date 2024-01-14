@@ -5,25 +5,24 @@
         width: 100%;
         height: 99.5vh;
         position: relative;
+        
 
         .swiper-wrapper {
             .swiper-slide {
                 padding-top: 20.7rem;
                 width: 100%;
+                background-size: cover !important;
 
                 &.slide-01 {
                     background: url("../img/diablo-capa.jpg") no-repeat center center;
-                    background-size: cover;
                 }
 
                 &.slide-02 {
                     background: url("../img/hearthstone-capa.jpg") no-repeat center center;
-                    background-size: cover;
                 }
 
                 &.slide-03 {
                     background: url("../img/warcraft-capa.jpg") no-repeat center center;
-                    background-size: cover;
                 }
 
                 .container {
