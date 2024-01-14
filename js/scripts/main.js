@@ -4,7 +4,15 @@ const slideThumb = new Swiper('.slide-thumbnail', {
     slidesPerView: 5,
     direction: 'vertical',
     spaceBetween: 20,
-    watchSlidesProgress: true
+    watchSlidesProgress: true,
+    breakpoints: {
+        320: {
+            direction: 'horizontal',
+        },
+        1050: {
+            direction: 'vertical',
+        }
+    } 
 });
 
 const swiperSlide = new Swiper('.swiper-principal', {
@@ -13,7 +21,7 @@ const swiperSlide = new Swiper('.swiper-principal', {
         swiper: slideThumb,
     },
     autoplay: {
-        delay: 5000,
+        delay: 7000,
         disableOnInteraction: false
     }
 });
@@ -86,9 +94,7 @@ btnMenu.forEach((btn, index) => {
             })
         })
 
-        btnMenu.forEach(itemBtn => {
-            itemBtn.classList.remove('active');
-        })
+        
 
         btn.classList.add('active')
         abaMenu[index].classList.add('active')
