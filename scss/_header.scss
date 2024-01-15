@@ -1,13 +1,18 @@
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 9.6rem;
-    border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.068);
     display: flex;
     align-items: center;
     z-index: 99;
+
+    &.fixed-menu {
+        background: linear-gradient(90deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.90) 100%);
+        backdrop-filter: blur(6px);
+    }
 
     .container {
         display: flex;
@@ -506,4 +511,18 @@ header {
     }
 
 
+}
+
+.open-drop {
+    overflow: hidden;
+
+    .dropdown-mobile {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0);
+
+        aside {
+            transform: translateX(0%);
+        }
+    }
 }

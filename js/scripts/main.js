@@ -121,6 +121,20 @@ btnMenu.forEach((btn, index) => {
     })
 })
 
+//Menu fixo
+const header = document.getElementById('js-header');
+
+function fixedMenu () {
+    if (window.scrollY > 80 ) {
+        header.classList.add('fixed-menu');
+    } else {
+        header.classList.remove('fixed-menu');
+    }
+}
+
+document.addEventListener('scroll', fixedMenu);
+
+
 
 //Menu mobile
 const btnMenuMobile = document.getElementById('js-btn-menu-mobile');
@@ -138,8 +152,15 @@ overlayMenu.addEventListener('click', openMenuMobile);
 
 
 //Dropdown menu mobile
-const dropdownMobile = document.querySelectorAll('.js-btn-menu-mobile');
+/*const dropdownMobile = document.querySelectorAll('.js-btn-menu-mobile');
 const abaMenuMobile = document.querySelectorAll('.js-dropdown-mobile')
 const fecharDropdownMobile = document.querySelector('js-close-mobile')
 
+function openDropMobile(event) {
+    event.preventDefault();
 
+    document.documentElement.classList.toggle('open-drop')
+}
+
+dropdownMobile.addEventListener('click', openDropMobile);
+fecharDropdownMobile.addEventListener('click', openDropMobile)*/
