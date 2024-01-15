@@ -12,7 +12,7 @@ const slideThumb = new Swiper('.slide-thumbnail', {
         1050: {
             direction: 'vertical',
         }
-    } 
+    }
 });
 
 const progressSlide = document.querySelector('.js-progress')
@@ -29,7 +29,7 @@ const swiperSlide = new Swiper('.swiper-principal', {
 
     //Barra de progress 
     on: {
-        init: function() {
+        init: function () {
             progressSlide.classList.remove('animate');
             progressSlide.classList.remove('active');
             progressSlide.classList.add('animate');
@@ -114,7 +114,7 @@ btnMenu.forEach((btn, index) => {
             })
         })
 
-        
+
 
         btn.classList.add('active')
         abaMenu[index].classList.add('active')
@@ -124,8 +124,8 @@ btnMenu.forEach((btn, index) => {
 //Menu fixo
 const header = document.getElementById('js-header');
 
-function fixedMenu () {
-    if (window.scrollY > 80 ) {
+function fixedMenu() {
+    if (window.scrollY > 5) {
         header.classList.add('fixed-menu');
     } else {
         header.classList.remove('fixed-menu');
@@ -152,15 +152,26 @@ overlayMenu.addEventListener('click', openMenuMobile);
 
 
 //Dropdown menu mobile
-/*const dropdownMobile = document.querySelectorAll('.js-btn-menu-mobile');
+const dropdownMobile = document.querySelectorAll('.js-btn-menu-mobile');
 const abaMenuMobile = document.querySelectorAll('.js-dropdown-mobile')
-const fecharDropdownMobile = document.querySelector('js-close-mobile')
+const fecharDropdownMobile = document.querySelectorAll('.js-close-mobile')
 
-function openDropMobile(event) {
-    event.preventDefault();
+dropdownMobile.forEach((btnAba, index) => {
+    btnAba.addEventListener('click', (event) => {
+        event.preventDefault();
 
-    document.documentElement.classList.toggle('open-drop')
-}
+        abaMenuMobile.forEach(itemMenu => {
+            itemMenu.classList.remove('active');
 
-dropdownMobile.addEventListener('click', openDropMobile);
-fecharDropdownMobile.addEventListener('click', openDropMobile)*/
+        })
+
+        dropdownMobile.forEach(itemBtn => {
+            itemBtn.classList.remove('active');
+        })
+
+        btnAba.classList.add('active')
+        abaMenuMobile[index].classList.add('active')
+    })
+    
+})
+

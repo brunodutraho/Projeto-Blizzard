@@ -791,6 +791,7 @@
     opacity: 0;
     pointer-events: none;
     transition: all .3s;
+    overflow: hidden;
 
     .overlay {
         position: fixed;
@@ -927,6 +928,36 @@
 
                 &:hover {
                     color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 830px) {
+        .box {
+            max-width: 31.6rem;
+            height: 50rem;
+
+            form {
+                max-width: 29rem;
+
+                .form-group {
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+            }
+
+            .others-conect {
+                ul {
+                    height: 6rem;
+                }
+            }
+
+            .message-user {
+                p {
+                    margin-bottom: 1rem;
                 }
             }
         }
