@@ -89,41 +89,43 @@ header {
         }
     }
 
-
     @media(max-width: 991px) {
-        
-            .left-container {
-                nav {
-                    display: none;
-                }
-            }
 
-            .right-container {
-                .menu-mobile {
-                    margin-left: 8.9rem;
-                    display: block;
-                }
+        .left-container {
+            nav {
+                display: none;
             }
-        
+        }
+
+        .right-container {
+            .menu-mobile {
+                margin-left: 8.9rem;
+                display: block;
+            }
+        }
+
     }
+
     @media(max-width: 578px) {
 
-            .right-container {
-                .btn {
-                    display: none;
-                }
+        .right-container {
+            .btn {
+                display: none;
             }
-        
+        }
+
     }
 
     @media(max-width: 420px) {
 
         height: 8rem;
+
         .left-container {
             .logo {
                 width: 100%;
                 max-width: 6.9rem;
                 height: 3.2rem;
+
                 &::after {
                     bottom: -2.59rem;
                 }
@@ -259,4 +261,249 @@ header {
             }
         }
     }
+}
+
+.mobile-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+    }
+
+
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 45%;
+        height: 100vh;
+        background: linear-gradient(90deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.90) 100%);
+        backdrop-filter: blur(6px);
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(27px);
+        padding: 3rem;
+        transform: translateX(-100%);
+        transition: transform .3s;
+
+        .logo {
+            max-width: 15rem;
+
+            img {
+                padding-bottom: 4rem;
+                border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        .buttons {
+            .btn {
+                line-height: 3rem;
+                padding: 0rem 1rem;
+                margin-bottom: 2rem;
+                
+
+                &.btn-primary {
+                    padding: 0rem 2rem;
+                }
+
+                &.btn-outline {
+                    width: 100%;
+                    max-width: 10.1rem;
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        nav {
+            ul {
+                font-size: 1.6rem;
+                font-weight: 600;
+
+                li {
+                    a {
+                        padding: 1rem 0;
+                        font-size: 1.8rem;
+                        display: flex;
+
+                        &:hover {
+                            color: $primary-default;
+                        }
+
+                        img {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-opened {
+    overflow: hidden;
+
+    .mobile-menu {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0);
+
+        aside {
+            transform: translateX(0%);
+        }
+    }
+}
+
+.dropdown-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 30rem;
+    height: 100%;
+    z-index: 1990;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: all .3s;
+
+    .close-menu {
+        position: absolute;
+        top: 0.5rem;
+        left: 26.5rem;
+        width: 100%;
+        max-width: 2.7rem;
+        height: 2.7rem;
+        z-index: 1999;
+    }
+
+    .area-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.90) 100%);
+        backdrop-filter: blur(6px);
+        box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(27px);
+        padding: 3rem;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-100%);
+        transition: transform .3s;
+
+        .container {
+            width: 100%;
+            max-width: 12rem;
+            height: 100%;
+            display: flex;
+            margin-left: 17rem;
+
+            ul {
+                li {
+                    a {
+                        span {
+                            display: block;
+                            text-align: center;
+                            width: 100%;
+                            max-width: 10rem;
+                            margin-bottom: 0.5rem;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateX(0%);
+        transition: all .3s;
+    }
+
+    &.esportes {
+        .area-menu {
+    
+            .container {
+                width: 100%;
+                max-width: 10rem;
+                height: 100%;
+                display: flex;
+                margin-left: 17rem;
+    
+                ul {
+                    
+                    li {
+                        a {
+                            span {
+                                display: block;
+                                text-align: center;
+                                width: 100%;
+                                max-width: 10rem;
+                                margin-bottom: 0.5rem;
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+        .footer-menu {
+    
+    
+            ul {
+                height: 4.4rem;
+            }
+        }
+    }
+
+    .footer-menu {
+        position: fixed;
+        top: 43%;
+        left: 36%;
+        width: 7rem;
+        max-width: 30rem;
+        height: 18.2rem;
+        z-index: 1990;
+
+
+        ul {
+            width: 100%;
+            max-width: 7rem;
+            height: 17.8rem;
+            border-right: 1.5px solid rgba(255, 255, 255, 0.1);
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 0.5rem;
+                }
+
+                span {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 0.5rem;
+                }
+            }
+        }
+    }
+
+
 }

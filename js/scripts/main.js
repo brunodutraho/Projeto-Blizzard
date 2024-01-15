@@ -120,3 +120,26 @@ btnMenu.forEach((btn, index) => {
         abaMenu[index].classList.add('active')
     })
 })
+
+
+//Menu mobile
+const btnMenuMobile = document.getElementById('js-btn-menu-mobile');
+const overlayMenu = document.querySelector('.js-overlay-menu');
+
+function openMenuMobile(event) {
+    event.preventDefault();
+    document.documentElement.classList.toggle('menu-opened');
+}
+
+btnMenuMobile.addEventListener('click', openMenuMobile);
+overlayMenu.addEventListener('click', openMenuMobile);
+
+
+
+
+//Dropdown menu mobile
+const dropdownMobile = document.querySelectorAll('.js-btn-menu-mobile');
+const abaMenuMobile = document.querySelectorAll('.js-dropdown-mobile')
+const fecharDropdownMobile = document.querySelector('js-close-mobile')
+
+
