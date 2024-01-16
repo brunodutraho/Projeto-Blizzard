@@ -371,7 +371,7 @@ header {
         top: 0;
         left: 0;
         width: 100%;
-        max-width: 33rem;
+        max-width: 48rem;
         height: 100vh;
         background: linear-gradient(90deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.90) 100%);
         backdrop-filter: blur(6px);
@@ -387,7 +387,7 @@ header {
         .close-menu {
             position: absolute;
             top: 1rem;
-            left: 32.9rem;
+            left: 47.9rem;
             width: 100%;
             max-width: 2.7rem;
             height: 2.7rem;
@@ -399,7 +399,7 @@ header {
         .area-menu {
             position: fixed;
             top: 0.2rem;
-            left: 5.6rem;
+            left: 9.6rem;
             width: 80%;
             height: 100vh;
             transition: transform .3s;
@@ -408,6 +408,8 @@ header {
             overflow-y: scroll;
 
             .container {
+                position: absolute;
+                left: 8rem;
                 width: 100%;
                 max-width: 12rem;
                 height: 100vh;
@@ -511,6 +513,24 @@ header {
 
 
     }
+
+    @media(max-width: 630px) {
+        .dropdown-mobile {
+            max-width: 33rem;
+            .close-menu {
+                left: 32.9rem;
+            }
+            .area-menu {
+                left: 5.6rem;
+
+                .container {
+                    position: absolute;
+                    left: 0rem;
+                }
+            }
+        }
+    }
+
 }
 
 
