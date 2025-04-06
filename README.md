@@ -37,5 +37,5 @@
   Sinta-se à vontade para contribuir com melhorias, sugestões ou reportar problemas. Este projeto é open-source e está disponível para a comunidade.
 </p>
 <div align="center">
-  <img height="550" src="https://ibb.co/bjcWrTf9"  />
+  <img height="550" src="https://i.postimg.cc/MpjPfV9d/blizzard.png"  />
 </div>
